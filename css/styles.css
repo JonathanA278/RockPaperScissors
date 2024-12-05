@@ -1,0 +1,96 @@
+/* Underwater Background */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #87cefa;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("bikini-bottom.jpg") no-repeat center center/cover;
+    z-index: -1;
+}
+
+.bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("bubbles.png") repeat-y;
+    animation: moveBubbles 10s infinite linear;
+}
+
+@keyframes moveBubbles {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+/* Game Container */
+.game-container {
+    text-align: center;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #ffcc00;
+    text-shadow: 2px 2px #000;
+}
+
+/* Buttons */
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.choice img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.choice img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+.btn {
+    background: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #ffc107;
+}
+
+/* Scoreboard and Results */
+#scoreboard, #results {
+    margin-top: 20px;
+}
+
+#message, #winner {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #333;
+}
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpongeBob Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="bubbles"></div>
+        <div class="game-container">
+            <h1>SpongeBob Rock-Paper-Scissors!</h1>
+            <p id="game-mode">Mode: <span id="mode">Classic</span></p>
+            <div id="scoreboard">
+                <p>Wins: <span id="wins">0</span></p>
+                <p>Losses: <span id="losses">0</span></p>
+                <p>Ties: <span id="ties">0</span></p>
+            </div>
+            <div id="message">Make your choice!</div>
+            <div class="choices">
+                <button class="choice" data-choice="rock">
+                    <img src="img/Pete_the_rock.webp" alt="Patrick Rock">
+                </button>
+                <button class="choice" data-choice="paper">
+                    <img src="img/DoodleBob_Stock_Art.png" alt="SpongeBob Paper">
+                </button>
+                <button class="choice" data-choice="scissors">
+                    <img src="img/images.jpg" alt="Squidward Scissors">
+                </button>
+            </div>
+            <div id="results">
+                <p>You chose: <span id="user-choice">-</span></p>
+                <p>Website chose: <span id="computer-choice">-</span></p>
+                <h2 id="winner">-</h2>
+            </div>
+            <button id="reset" class="btn">Reset Game</button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
